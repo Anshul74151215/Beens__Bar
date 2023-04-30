@@ -7,7 +7,7 @@ mongdb();
 app.use((req,res,next)=>{
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://ephemeral-brioche-8ff192.netlify.app/"
+    "https://ephemeral-brioche-8ff192.netlify.app"
   );
   res.header(
     "Access-control-Allow-Headers",
