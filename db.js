@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require('mongoose')
 
 const mongdb = async () => {
-    mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true }).then(async (result) => {
+    mongoose.connect("mongodb+srv://Anshul_ojha:Luhsna@atlascluster.ekt7t1o.mongodb.net/mern_db", { useNewUrlParser: true }).then(async (result) => {
         console.log('Mongo connected');
         const fetched_data = await result.connection.db.collection("foodData2");
 
