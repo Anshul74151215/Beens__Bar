@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 app.use(express.json());
-app.use("/api", require("../backend/Routes/CreatUser"));
+app.use("/api", require("./CreatUser"));
 app.use("/api", require("./Routes/DisplayData"));
 app.use("/api", require("./Routes/OrderData"));
 app.listen(5000, () => {
