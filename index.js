@@ -22,7 +22,7 @@ app.use(express.json());
 app.use("/api", require("../backend/Routes/CreatUser"));
 app.use("/api", require("./Routes/DisplayData"));
 app.use("/api", require("./Routes/OrderData"));
-app.listen(process.env.PORT | 5000, () => {
+app.listen(5000, () => {
   console.log(`Example app listening on port ${port}`);
 });
 /*
