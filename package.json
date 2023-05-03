@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "b:start": "node index.js",
-    "f:start": "npm start --prefix client",
-    "clientinstall": "npm install --prefix client",
-    "dev": "b:start && f:start",
-    "render-postbuild": "npm install --prefix client && npm run build -- prefix client"
+    "start": "node index.js"
 
   },
   "author": "Anshul",
