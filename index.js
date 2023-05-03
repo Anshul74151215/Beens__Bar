@@ -2,7 +2,7 @@ const express = require("express");
 const mongdb = require("./db");
 const app = express();
 const port = 5000;
-mongdb();
+
 
 app.use((req, res, next) => {
   res.setHeader(
@@ -23,6 +23,7 @@ app.use(express.json());
 app.use("/api", require("./Routes/CreatUser"));
 app.use("/api", require("./Routes/DisplayData"));
 app.use("/api", require("./Routes/OrderData"));
+mongdb();
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Example app listening on port ${port}`);
 });
