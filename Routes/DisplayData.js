@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-
+const mongdb = require("./db");
+mongdb();
 router.post('/foodData',(req,res)=>{
     try{
         res.send([global.foodData2,global.foodCategory])

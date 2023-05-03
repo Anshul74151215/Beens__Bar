@@ -3,10 +3,7 @@ const mongdb = require("./db");
 const mongoose = require("mongoose");
 const app = express();
 const port = 5000;
- mongoose.connect(
-   "mongodb+srv://Anshul_ojha:Luhsna@atlascluster.ekt7t1o.mongodb.net/mern_db?retryWrites=true&w=majority",
-   { useNewUrlParser: true }
- );
+
 mongdb();
 
 app.use((req, res, next) => {
