@@ -1,15 +1,13 @@
 const express = require("express");
 const mongdb = require("./db");
-const mongoose = require("mongoose");
 const app = express();
 const port = 5000;
-
 mongdb();
 
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://tame-tan-betta-cap.cyclic.app"
+    "http://localhost:3000"
   );
   res.header(
     "Access-control-Allow-Headers",
