@@ -2,6 +2,7 @@ const express = require("express");
 const mongdb = require("./db");
 const mongoose = require("mongoose");
 const app = express();
+const port = 5000;
 
 mongdb();
 
