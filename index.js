@@ -60,6 +60,40 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  *        description: failure
  */
 
+/**
+ * @swagger
+ * /api/loginuser:
+ *  post:
+ *    tags:
+ *      - Authentication
+ *    summary: login user
+ *    parameters:
+ *      - in: body
+ *        name: body
+ *        description: login user
+ *        required: true
+ *        example: {"email": "ffhzzf@gmail.com","password": "1232245678"}
+ *    responses:
+ *      '200':
+ *        description: Success
+ *      '203':
+ *        description: failure
+ */
+
+/**
+ * @swagger
+ * /api/foodData:
+ *  get:
+ *    tags:
+ *      - Authentication
+ *    summary: Login user
+ *    responses:
+ *      '200':
+ *        description: Success
+ *      '203':
+ *        description: failure
+ */
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
