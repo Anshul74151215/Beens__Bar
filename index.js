@@ -1,6 +1,8 @@
 const express = require("express");
 const mongdb = require("./db");
 const app = express();
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
 const port = 5000;
 mongdb();
 
@@ -20,6 +22,44 @@ app.use(express.json());
 app.use("/api", require("./Routes/CreatUser"));
 app.use("/api", require("./Routes/DisplayData"));
 app.use("/api", require("./Routes/OrderData"));
+
+//Swagger initialization
+const swaggerOptions = {
+  swaggerDefinition: {
+    info: {
+      title: "Beens Bar",
+      description: "Authentication using jwt",
+      servers: [`http://localhost:${port}`],
+    },
+  },
+  apis: ["index.js"],
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+//Swagger definition
+
+/**
+ * @swagger
+ * /api/creatuser:
+ *  post:
+ *    tags:
+ *      - Authentication
+ *    summary: create user
+ *    parameters:
+ *      - in: body
+ *        name: body
+ *        description: create user
+ *        required: true
+ *        example: {"name": "Anshul","email": "ffhzzf@gmail.com","password": "1232245678","location": "creden"}
+ *    responses:
+ *      '200':
+ *        description: Success
+ *      '203':
+ *        description: failure
+ */
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
