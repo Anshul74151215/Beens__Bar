@@ -11,10 +11,15 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Origin",
     "https://64593b1f8316700fb8066e6d--ephemeral-souffle-6e97b2.netlify.app"
   );
-  res.header(
-    "Access-control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
   );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", true);
   next();
 });
 
