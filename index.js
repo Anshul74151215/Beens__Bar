@@ -9,7 +9,7 @@ mongdb();
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://glowing-granita-8039cd.netlify.app"
+    "https://6459452f9ce1521519a16ae1--glowing-granita-8039cd.netlify.app/"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -105,5 +105,5 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
-/*
-https://tame-tan-betta-cap.cyclic.app */
+// https://olive-caridea-suit.cyclic.app/api-docs/
+// https://glowing-granita-8039cd.netlify.app/
