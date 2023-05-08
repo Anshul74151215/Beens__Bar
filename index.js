@@ -35,7 +35,7 @@ app.use("/api", require("./Routes/OrderData"));
 const swaggerOptions = {
   swaggerDefinition: {
     info: {
-      title: "Beens Bar",
+      title: "Beans Bar Cafe",
       description: "Authentication using jwt",
       servers: [`http://localhost:${port}`],
     },
@@ -106,4 +106,4 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 // https://olive-caridea-suit.cyclic.app/api-docs/
-// https://glowing-granita-8039cd.netlify.app/
+// https://6459452f9ce1521519a16ae1--glowing-granita-8039cd.netlify.app/
