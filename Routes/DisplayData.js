@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router();
 router.get('/foodData',(req,res)=>{
     try{
-        res.send([global.foodData2,global.foodCategory])
+        req.send([global.foodData2,global.foodCategory])
 
     }catch(error){
         console.log(error,message);
-        res.send("server err...")
+        req.send("server err...")
     }
 })
 module.exports = router;
