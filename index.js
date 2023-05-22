@@ -9,7 +9,7 @@ mongdb();
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://646b1d3cee907b3099bd09da--transcendent-piroshki-802c41.netlify.app/"
+    "https://frabjous-hotteok-c41e17.netlify.app/"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
