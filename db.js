@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const mongdb = async () => {
   mongoose
     .connect(
-      "mongodb+srv://Anshul_ojha:Luhsna@atlascluster.ekt7t1o.mongodb.net/mern_db?retryWrites=true&w=majority",
+      "mongodb+srv://Anshul_ojha:Luhsna@atlascluster.ekt7t1o.mongodb.net/mern_db",
       { useNewUrlParser: true }
     )
     .then(async (result) => {
