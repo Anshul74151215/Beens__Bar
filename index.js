@@ -9,7 +9,7 @@ mongdb();
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://frabjous-hotteok-c41e17.netlify.app/"
+    "https://frabjous-hotteok-c41e17.netlify.app"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -105,5 +105,5 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
-// https://olive-caridea-suit.cyclic.app/api-docs/
-// https://6459452f9ce1521519a16ae1--glowing-granita-8039cd.netlify.app/
+// https://beans-bar.onrender.com/api-docs/
+// https://frabjous-hotteok-c41e17.netlify.app/
